@@ -182,7 +182,7 @@ button {
     animation: pulse 3s infinite;
     top: 25%;
     left: 20%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main-img::after {
@@ -198,7 +198,7 @@ button {
     animation: pulse-2 3s 0.5s infinite;
     top: 25%;
     left: 20%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 @keyframes pulse {
@@ -551,7 +551,7 @@ button {
 
 .present-block {
     position: fixed;
-    z-index: 100;
+    z-index: 19;
     bottom: 30px;
     right: 30px;
 }
