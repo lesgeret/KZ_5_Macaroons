@@ -106,6 +106,7 @@ button {
     background-color: rgb(235, 168, 177);
     padding-top: 126px;
     padding-bottom: 108px;
+    overflow: hidden;
 }
 
 .main .container {
