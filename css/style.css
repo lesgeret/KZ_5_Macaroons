@@ -1,0 +1,625 @@
+@font-face {
+    font-family: GilroyReg;
+    src: url('../fonts/gilroy-regular.ttf')
+}
+
+@font-face {
+    font-family: GilroyMed;
+    src: url('../fonts/gilroy-medium.ttf')
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url('../fonts/gilroy-bold.ttf')
+}
+
+@font-face {
+    font-family: GilroyExraBold;
+    src: url('../fonts/gilroy-extrabold.ttf')
+}
+
+@font-face {
+    font-family: Tavolga;
+    src: url('../fonts/tavolga-free.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: GilroyReg, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.header {
+    background-color: rgb(235, 168, 177);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 38px;
+    padding-bottom: 25px;
+}
+
+
+.header-menu {
+    display: flex;
+}
+
+.header-menu ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header-menu-list a {
+    font-size: 14px;
+    font-family: GilroyMed, sans-serif;
+    color: rgb(119, 11, 29);
+    padding-bottom: 5px;
+    transition: 0.3s;
+    border-bottom: 2px solid rgba(119, 11, 29, 0);
+
+}
+
+.header-menu-list a:hover {
+    border-bottom: 2px solid rgba(119, 11, 29, 1);
+    opacity: 1;
+}
+
+.header-menu-phone {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.burger-button {
+    display: none;
+}
+
+.main {
+    background-color: rgb(235, 168, 177);
+    padding-top: 126px;
+    padding-bottom: 108px;
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-info {
+    max-width: 580px;
+}
+
+.main-info h1 {
+    font-size: 55px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    margin-bottom: 60px;
+    line-height: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.main-info-text {
+    max-width: 350px;
+    font-size: 18px;
+    font-family: "Tavolga";
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    line-height: 25px;
+    margin-bottom: 80px;
+}
+
+.button {
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+    transition: all 0.5s;
+}
+
+.button:hover {
+    box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+}
+
+.main-info-button {
+    width: 240px;
+    height: 60px;
+}
+
+.main-img {
+    margin-right: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.main-img-macaroon_big {
+    display: block;
+    width: 100%;
+}
+
+.main-img::before {
+    content: '';
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -2;
+    border: 1px solid rgb(130, 19, 40);
+    animation: pulse 3s infinite;
+    top: 25%;
+    left: 20%;
+    overflow: hidden;
+}
+
+.main-img::after {
+    content: '';
+    position: absolute;
+    max-width: 250px;
+    width: 100%;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -2;
+    border: 1px solid rgb(130, 19, 40);
+    animation: pulse-2 3s 0.5s infinite;
+    top: 25%;
+    left: 20%;
+    overflow: hidden;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2.6);
+        border: 2px solid rgba(130, 19, 40, 0);
+    }
+}
+
+@keyframes pulse-2 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2.6);
+        border: 2px solid rgba(130, 19, 40, 0);
+    }
+}
+
+.advantages {
+    background-color: #ffefef;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.advantages-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.advantages-main-info {
+    max-width: 475px;
+}
+
+.advantages-main-info h2 {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.222;
+    margin-bottom: 61px;
+}
+
+
+.advantages-main-info-text {
+    max-width: 397px;
+    font-size: 18px;
+    font-family: GilroyReg, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.556;
+}
+
+.advantages-main-img img {
+    width: 100%;
+}
+
+.advantages-grid {
+    padding-top: 85px;
+    display: grid;
+    grid-template-columns: repeat(4, 225px);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.advantages-grid-item {
+    width: 225px;
+}
+
+.advantages-grid-item-numbers {
+    margin-bottom: 13px;
+}
+
+.advantages-grid-item-numbers-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #821328;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.advantages-grid-item-numbers-number {
+    font-family: GilroyExraBold, sans-serif;
+    font-size: 60px;
+    line-height: normal;
+    color: white;
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.advantages-grid-item-h {
+    font-size: 20px;
+    font-family: GilroyExraBold, sans-serif;
+    margin-bottom: 20px;
+}
+
+.advantages-grid-item-text {
+    font-size: 15px;
+    font-family: GilroyMed, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.333;
+}
+
+.advantages-grid-item:hover .advantages-grid-item-numbers-circle {
+    background-color: rgb(235, 168, 177);
+}
+
+.advantages-grid-item:hover .advantages-grid-item-numbers-number {
+    color: #821328;
+}
+
+.product {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: rgb(235, 168, 177);
+}
+
+.product h2 {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    line-height: 1.222;
+    text-align: center;
+    margin-bottom: 143px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 29px;
+}
+
+.product-grid-item {
+    width: 263px;
+    text-align: center;
+    padding: 0 21px 27px 21px;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+
+.product-image {
+    height: 124px;
+    position: relative;
+    margin-bottom: -20px;
+}
+
+.product-macaron {
+    position: absolute;
+    top: -50%;
+    left: 12.5px;
+    transition: all 0.2s;
+
+}
+
+.product-grid-item:hover .product-macaron {
+    transform: scale(1.2);
+}
+
+.product-name {
+    font-size: 18px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 26px;
+}
+
+.product-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-block-info {
+    font-size: 15px;
+    font-family: GilroyReg;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.product-block-info-quantity {
+    margin-bottom: 13px;
+}
+
+.product-block-info-price::after {
+    content: " руб.";
+}
+
+.product-button {
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.order {
+    background-color: #ffefef;
+    padding: 98px 0 120px 0;
+}
+
+.order .container {
+    display: flex;
+    align-items: center;
+}
+
+.order-images {
+    margin-left: 17px;
+    max-width: 50%;
+    width: 100%;
+    position: relative;
+    margin-top: 45px;
+}
+
+.strawberry_1 {
+    position: absolute;
+    left: -50px;
+    animation: berry-1 2s infinite;
+}
+
+@keyframes berry-1 {
+    0% {}
+
+    50% {
+        transform: translateY(20%);
+    }
+
+    100% {}
+}
+
+.order-image-big {
+    /* display: block; */
+    margin-top: 28px;
+    align-self: center;
+}
+
+.order-main {
+    max-width: 50%;
+    width: 100%;
+    padding-left: 10px;
+    position: relative;
+}
+
+.order h2 {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(51, 25, 7);
+}
+
+.order-info {
+    max-width: 404px;
+    font-size: 18px;
+    color: rgb(51, 25, 7);
+    margin-top: 41px;
+    margin-bottom: 48px;
+}
+
+.order h3 {
+    font-size: 18px;
+    color: rgb(18, 10, 6);
+    margin-top: 40px;
+    margin-bottom: 21px;
+    font-family: GilroyBold, sans-serif;
+}
+
+.order-input {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid rgb(130, 19, 40);
+    width: 294px;
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #ffefef;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.order-input::placeholder {
+    font-size: 15px;
+    color: rgb(118, 12, 34);
+    font-family: GilroyBold, sans-serif;
+}
+
+.strawberry_2 {
+    position: absolute;
+    bottom: 89px;
+    right: 12px;
+    animation: berry-2 3s infinite;
+}
+
+@keyframes berry-2 {
+    0% {}
+
+    50% {
+        transform: translateY(40%);
+    }
+
+    100% {}
+}
+
+.footer {
+    background-color: #c0707c;
+    padding: 73px 0 62px 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left .logo {
+    margin-bottom: 19px;
+}
+
+.footer-rights {
+    font-size: 12px;
+    color: rgb(227, 172, 180);
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.insta-logo {
+    margin-bottom: 15px;
+}
+
+.footer-center-text a {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-family: GilroyBold, sans-serif;
+    text-decoration: none;
+}
+
+.footer-right {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.present-block {
+    position: fixed;
+    z-index: 100;
+    bottom: 30px;
+    right: 30px;
+}
+
+.present-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgb(99, 9, 27) 0%, rgb(204, 97, 115) 100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.present-block:hover .present-circle {
+    cursor: pointer;
+    box-shadow: 0px 0px 12.6px 2.4px rgba(130, 19, 40, 0.5);
+}
+
+.present-image {
+    display: block;
+}
+
+.present-message {
+    position: absolute;
+    bottom: -28px;
+    right: 110px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.present-message-big {
+    width: 172px;
+    height: 64px;
+    border: 2px solid #770a1d;
+    border-radius: 10px;
+    background-color: rgb(254, 239, 238);
+    font-size: 15px;
+    color: rgb(119, 10, 29);
+    font-family: GilroyMed, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    position: relative;
+}
+
+.present-message-small {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #770a1d;
+    border-bottom: 2px solid #770a1d;
+    background-color: rgb(254, 239, 238);
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 160px;
+}
+
+.present-block:hover .present-message {
+    transform: translateY(-60%);
+    opacity: 1;
+}
+
+.burger {
+    display: none;
+}
+
+.close {
+    display: none;
+}
