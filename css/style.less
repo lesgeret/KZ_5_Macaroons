@@ -138,7 +138,7 @@ button {
 .main-info-text {
     max-width: 350px;
     font-size: 18px;
-    font-family: "Tavolga";
+    font-family: Tavolga, sans-serif;
     color: rgb(255, 255, 255);
     font-weight: normal;
     line-height: 25px;
@@ -155,7 +155,7 @@ button {
 }
 
 .button:hover {
-    box-shadow: 0px 5px 9px 1px rgba(130, 19, 40, 0.5);
+    box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
 }
 
 .main-info-button {
@@ -376,7 +376,6 @@ button {
 
 .product-block-info {
     font-size: 15px;
-    font-family: GilroyReg;
     color: rgb(255, 255, 255);
     text-align: left;
 }
@@ -430,7 +429,6 @@ button {
 }
 
 .order-image-big {
-    /* display: block; */
     margin-top: 28px;
     align-self: center;
 }
@@ -446,6 +444,18 @@ button {
     font-size: 45px;
     font-family: Tavolga, sans-serif;
     color: rgb(51, 25, 7);
+}
+
+#order_form {
+    /*display: none;*/
+}
+
+#order_success {
+    display: none;
+    height: 396px;
+    font-size: 37px;
+    color: rgb(118, 12, 34);
+    font-family: GilroyBold, sans-serif;
 }
 
 .order-info {
@@ -476,6 +486,9 @@ button {
     background-color: #ffefef;
     box-sizing: border-box;
     outline: none;
+    font-size: 15px;
+    color: rgb(118, 12, 34);
+    font-family: GilroyBold, sans-serif;
 }
 
 .order-button {
@@ -486,6 +499,15 @@ button {
     font-size: 15px;
     color: rgb(118, 12, 34);
     font-family: GilroyBold, sans-serif;
+}
+
+.input-alert {
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: rgb(234, 20, 20);
+    font-family: GilroyBold, sans-serif;
+    display: none;
 }
 
 .strawberry_2 {
@@ -567,7 +589,7 @@ button {
 
 .present-block:hover .present-circle {
     cursor: pointer;
-    box-shadow: 0px 0px 12.6px 2.4px rgba(130, 19, 40, 0.5);
+    box-shadow: 0 0 12.6px 2.4px rgba(130, 19, 40, 0.5);
 }
 
 .present-image {
@@ -620,4 +642,55 @@ button {
 
 .close {
     display: none;
+}
+
+/*LOADER*/
+.lds-ripple {
+    /*display: inline-block;*/
+    position: relative;
+    width: 80px;
+    display: none;
+    margin-left: 164px;
+    height: 396px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid #965252;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
 }

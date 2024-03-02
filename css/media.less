@@ -1,13 +1,8 @@
-/* max 1425 */
-/* @media screen and (max-width: 1425px) {
-    .present-block {
-        position: fixed;
-        z-index: 100;
-        bottom: 130px;
-        right: 30px;
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
     }
-} */
-
+}
 
 /* max 1220 */
 @media screen and (max-width: 1220px) {
@@ -53,7 +48,7 @@
 
     .main {
         padding-top: 97px;
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 
     .main .container {
@@ -109,18 +104,16 @@
 
     .advantages-main-info h2 {
         max-width: 475px;
-        margin: 0 auto;
-        margin-bottom: 52px;
+        margin: 0 auto 52px;
     }
 
     .advantages-main-info-text {
-        margin: 0 auto;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
         max-width: 100%;
     }
 
     .strawberry_1 {
-        left: 0px;
+        left: 0;
     }
 
     .strawberry_2 {
@@ -171,7 +164,6 @@
 }
 
 
-
 /* 376 - 768 */
 @media screen and (max-width: 768px) {
 
@@ -185,7 +177,7 @@
         position: relative;
     }
 
-    section.header>div>img {
+    section.header > div > img {
         position: absolute;
     }
 
@@ -199,7 +191,7 @@
 
     .main {
         padding-top: 80px;
-        padding-bottom: 0px;
+        padding-bottom: 0;
     }
 
     .main .container {
@@ -253,7 +245,7 @@
         justify-content: space-between;
     }
 
-    body>section.header>div>img {
+    body > section.header > div > img {
         position: static;
     }
 
@@ -288,8 +280,7 @@
     }
 
     .main-info-text {
-        margin: 0 auto;
-        margin-bottom: 40px;
+        margin: 0 auto 40px;
     }
 
     .main-img::before {
@@ -314,6 +305,10 @@
 
     .order-button {
         width: 344px;
+    }
+
+    #order_success {
+        padding-top: 150px;
     }
 
 
@@ -361,7 +356,7 @@
         justify-content: space-between;
     }
 
-    section.header>div>img {
+    section.header > div > img {
         position: static;
     }
 
@@ -407,7 +402,6 @@
     }
 
     /* modal */
-
     .menu {
         position: fixed;
         z-index: 20;
@@ -543,7 +537,7 @@
         font-size: 32px;
         line-height: 1.25;
     }
-    
+
     .main-info-text {
         font-size: 16px;
         line-height: 1.438;
@@ -621,8 +615,12 @@
     }
 
     .present-block {
-        bottom: 0px;
-        right: 0px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .lds-ripple {
+        margin-left: 120px;
     }
 }
 
