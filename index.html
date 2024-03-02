@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KZ_5</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <title>KZ_5_10_LESS_GULP</title>
+    <link rel="stylesheet" href="compiled/style.css">
+<!--    <link rel="stylesheet/less" href="css/style.less">-->
+<!--    <script src="scripts/less.js"></script>-->
+<!--    отключил ориг. less стили и компилятор    -->
 </head>
 
 <body>
@@ -34,13 +36,13 @@
             </div>
             <ul>
                 <li class="header-menu-list">
-                    <a href="#">Пироженки</a>
+                    <a href="#products">Пироженки</a>
                 </li>
                 <li class="header-menu-list">
-                    <a href="#">О нас</a>
+                    <a href="#advantages">О нас</a>
                 </li>
                 <li class="header-menu-list">
-                    <a href="#">Оформить заказ</a>
+                    <a href="#order">Оформить заказ</a>
                 </li>
             </ul>
         </nav>
@@ -61,7 +63,7 @@
                 Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
             </div>
             <div class="main-info-action">
-                <button class="button main-info-button">Выбрать макарун</button>
+                <button id="choose_macaroon" class="button main-info-button">Выбрать макарун</button>
             </div>
         </div>
         <div class="main-img">
@@ -70,7 +72,7 @@
     </div>
 </section>
 
-<section class="advantages">
+<section id="advantages" class="advantages">
     <div class="container">
 
         <div class="advantages-main">
@@ -138,9 +140,9 @@
     </div>
 </section>
 
-<section class="product">
+<section id="products" class="product">
     <div class="container">
-        <h2>Выберите свой макарун</h2>
+        <h2 id="products-header">Выберите свой макарун</h2>
         <div class="product-grid">
             <div class="product-grid-item">
                 <div class="product-image">
@@ -206,7 +208,7 @@
     </div>
 </section>
 
-<section class="order">
+<section id="order" class="order">
     <div class="container">
         <div class="order-images">
             <img src="img/strawberry_1.png" alt="strawberry" class="strawberry_1">
@@ -216,17 +218,28 @@
             <h2>Закажите макарун!</h2>
             <div class="order-info">Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
             </div>
-            <h3>Ваш выбор</h3>
-            <input class="order-input" type="text" maxlength="50" placeholder="Напишите, что хотите заказать...">
-            <div class="input-alert">Необходимо ввести название</div>
-            <h3>Заполните данные для заказа</h3>
-            <input class="order-input" type="text" maxlength="50" placeholder="Ваше имя">
-            <div class="input-alert">Необходимо ввести имя</div>
-            <input class="order-input" type="text" maxlength="50" placeholder="+375 (__) ___ - __ - __">
-            <div class="input-alert">Необходимо ввести телефон</div>
-            <div class="main-info-action">
-                <button class="button main-info-button order-button">Оформить заказ</button>
+            <div id="order_loader" class="lds-ripple">
+                <div></div>
+                <div></div>
             </div>
+            <div id="order_success">
+                Спасибо за Ваш заказ!<br> Мы скоро свяжемся с Вами!
+            </div>
+            <form id="order_form">
+                <h3>Ваш выбор</h3>
+                <input id="product" class="order-input" type="text" maxlength="20"
+                       placeholder="Ваш макарун...">
+                <div class="input-alert">Закажите макарун</div>
+                <h3>Заполните данные для заказа</h3>
+                <input id="name" class="order-input" type="text" maxlength="20" placeholder="Ваше имя">
+                <div class="input-alert">Необходимо ввести имя</div>
+                <input id="phone" class="order-input" type="text" placeholder="+375 (__) ___ - __ - __">
+                <div class="input-alert">Необходимо ввести телефон</div>
+                <div class="main-info-action">
+                    <button type="button" id="submit" class="button main-info-button order-button">Оформить заказ
+                    </button>
+                </div>
+            </form>
             <img src="img/strawberry_2.png" alt="strawberry_2" class="strawberry_2">
         </div>
     </div>
@@ -259,6 +272,10 @@
 </footer>
 
 
+
+
+<script src="scripts/jquery-3.7.1.min.js"></script>
+<script src="scripts/jquery.inputmask.min.js"></script>
 <script src="scripts/script.js"></script>
 
 </body>
